@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.status && data.result) {
                     tiktokContent.innerHTML = `
                         <h2>${data.result.title}</h2>
-                        <audio controls>
-                            <source src="${data.result.music}" type="audio/mpeg">
+                        <video controls>
+                            <source src="${data.result.play}" type="video/mp4">
                             Your browser does not support the audio element.
-                        </audio>
+                        </video>
                         <button id="downloadMusicButton" class="download-btn">Download Music</button>
                     `;
                     
