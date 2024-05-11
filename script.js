@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             <source src="${data.result.play}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <a href="${data.result.play}" download class="download-btn">Download Video</a>
-                        <a href="${data.result.music}" download class="download-btn">Download Music</a>
+                        <button href="${data.result.play}" download class="download-btn">Download Video</button>
+                        <button href="${data.result.music}" download class="download-btn">Download Music</button>
                     `;
                 } else {
                     tiktokContent.innerHTML = `<p>Video tidak ditemukan</p>`;
