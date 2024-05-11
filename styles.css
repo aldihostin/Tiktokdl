@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.loading-spinner {
+    display: none;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#tiktok-content {
+    margin-top: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Tambahkan aturan CSS berikut untuk mengatur ukuran video */
+video {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Video akan menyesuaikan lebar maksimal container */
+}
+
+/* Tambahkan aturan CSS untuk mengatur ukuran video saat tampilan layar kecil */
+@media (max-width: 768px) {
+    video {
+        width: calc(100vw - 40px); /* Lebar video akan menyesuaikan lebar layar dikurangi margin */
+        height: auto;
+        max-width: none; /* Video akan menyesuaikan lebar layar */
+    }
+}
