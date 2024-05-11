@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 loadingSpinner.style.display = 'none';
                 if (data.status && data.result) {
                     tiktokContent.innerHTML = `
+                        
                         <h2>${data.result.title}</h2>
                         <video controls>
                             <source src="${data.result.play}" type="video/mp4">
-                            Your browser does not support the audio element.
+                            Your browser does not support the video tag.
                         </video>
-                        <button id="downloadMusicButton" class="download-btn">Download Music</button>
-                    `;
+                        `;
                     
                     // Menambahkan event listener untuk tombol download musik
                     const downloadMusicButton = document.getElementById('downloadMusicButton');
