@@ -3,18 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok Downloader</title>
+    <title>Dashboard - TikTok Downloader</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>TikTok Downloader</h1>
-        <input type="text" id="tiktokUrl" placeholder="Masukkan URL video TikTok">
-        <button id="fetchTikTok">Download Video</button>
-        <div class="loading-spinner"></div>
-        <div id="tiktok-content"></div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">TikTok Downloader</a>
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+        <div class="slider">
+            <img src="https://b.top4top.io/p_3060phjxq0.jpg" class="slider-image" alt="Image 1">
+            <img src="https://h.top4top.io/p_3060jo0vx0.jpg" class="slider-image" alt="Image 2">
+            <img src="https://d.top4top.io/p_3060mto0u0.jpg" class="slider-image" alt="Image 3">
+        </div>
+        
+       <div class="container">
+        <section id="intro">
+            <h1>Welcome to TikTok Downloader</h1>
+            <p>This website allows you to download TikTok videos easily. Just paste the URL of the TikTok video you want to download, and click the download button.</p>
+            <button id="getStarted">Get Started</button>
+        </section>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('getStarted').addEventListener('click', function() {
+            window.location.href = 'download.html';
+        });
+
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-image');
+        const totalSlides = slides.length;
+
+        function showSlide(slideIndex) {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = index === slideIndex ? '1' : '0';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000);
+        showSlide(currentSlide);
+    </script>
 </body>
 </html>
