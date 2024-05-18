@@ -1,84 +1,158 @@
+/* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+.navbar {
+    background-color: #007bff;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
     margin: 0;
     padding: 0;
 }
 
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: left;
+        margin: 5px 0;
+    }
+}
+
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    background: #fff;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.slider {
+    position: relative;
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1;
 }
 
 h1 {
-    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
     color: #333;
 }
 
+p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+}
+
 input[type="text"] {
-    width: calc(100% - 100px);
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 button {
-    width: 100px;
-    padding: 10px;
-    background-color: #4caf50;
+    padding: 10px 20px;
+    font-size: 16px;
     color: #fff;
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
 }
 
 .loading-spinner {
     display: none;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
+    margin: 20px 0;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-#tiktok-content {
+#tiktok-content a {
+    display: inline-block;
     margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-/* Tambahkan aturan CSS berikut untuk mengatur ukuran video */
-video {
-    width: 100%;
-    height: auto;
-    max-width: 100%; /* Video akan menyesuaikan lebar maksimal container */
-}
-
-/* Tambahkan aturan CSS untuk mengatur ukuran video saat tampilan layar kecil */
-@media (max-width: 768px) {
-    video {
-        width: calc(100vw - 40px); /* Lebar video akan menyesuaikan lebar layar dikurangi margin */
-        height: auto;
-        max-width: none; /* Video akan menyesuaikan lebar layar */
-    }
+#tiktok-content a:hover {
+    background-color: #218838;
 }
